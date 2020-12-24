@@ -1,32 +1,32 @@
-import React from 'react';
-import {ListItems} from './ListItems/ListItems';
+import React, {useState} from 'react';
+import {ListItems} from './ListItems/index';
 import {AddList} from './AddList/AddList';
-import {list} from '../List';
 import {Grid3} from './Styles/style';
 import {ListDetailsStart} from '../Components/ListDeteils/ListDetailsStart';
-import {ListDetalisTo} from '../Components/ListDeteils/listDatalisTo';
+import {ListDetalisTo} from './ListDeteils/index.js';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+import { selectListAction } from '../Store/actions/list';
+
 
 
 export const Main = ()=>{
- 
 
     return(
         <Grid3>
             <Router> 
            
-            <ListItems item = {list}></ListItems>
+            <ListItems selectedList ={selectListAction}/>
             <Switch>
             <Route path="/" exact>
 <ListDetailsStart/>
             </Route>
             <Route path="/listDetails" >
-<ListDetalisTo/>
+<ListDetalisTo />
             </Route>
         </Switch>
           <Link to = '/'></Link>

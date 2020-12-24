@@ -1,13 +1,12 @@
 
-import {SELECT_LIST} from '../actions/list';
 
-const initialState =  {
+export const initialState =  {
     list: [
         {
         id:1,
         date: "12.12.20",
         title: "Update somthing",
-        text: "Update ....",
+        text: "Update .1..",
         important: true,
 
     },
@@ -15,40 +14,24 @@ const initialState =  {
         id:2,
         date: "12.12.20",
         title: "Update somthing",
-        text: "Update ....",
+        text: "Update .2..",
         important: false,
 
     },    {
         id:3,
         date: "12.12.20",
         title: "Update somthing",
-        text: "Update ....",
+        text: "Update .3..",
         important: false,
 
     },    {
         id:4,
         date: "12.12.20",
         title: "Update somthing",
-        text: "Update ....",
+        text: "Update .4..",
         important: false,
 
     }
 ],
     selectList: null
  }
-
-export const lists =(state=initialState, action)=>{
-    switch(action.type){
-        case SELECT_LIST:{
-            return{
-                ...state,
-                selectList: action.list
-            }
-    }
-    default:
-    return{
-        ...state
-    }
-}
-}
-

@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {storCreator} from './Store/store';
 
 const store = storCreator();
+console.log("APP>>>", store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = {store}>

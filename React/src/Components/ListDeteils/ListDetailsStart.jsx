@@ -5,7 +5,7 @@ import {Grid3_2 } from '../Styles/style';
 export const ListDetailsStart = ()=>{
     return(
        <Grid3_2>
-        <h3>Start</h3>
+        <h3 className = "center_title">Start</h3>
         </Grid3_2>
     )
 }

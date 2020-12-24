@@ -9,10 +9,21 @@ margin:0 auto;
 
 export const Title = styled.h1`
  text-align: center;
+ color: rgba(0, 198,33);
+ font-size: 5vw;
 `;
 
 export const Grid3 = styled.main`
 display: flex;
+line-height: 2;
+
+.center_title{
+  text-align:center;
+   color:#EC9F0E;
+  font-size: 2vw;
+  text-transform: uppercase; 
+}
+
 `;
 
 
@@ -24,8 +35,17 @@ width: 30%;
 export const Grid3_2 = styled.div`
 width: 40%;
 
-.center_title{
+.listDetalis{
+  max-width:80%;
+  margin:0 auto;
+  padding: 2%;
+  background-color:rgba(0, 198,33, 0.1);
+}
+
+.listDetalis_title{
   text-align:center;
+  text-transform: uppercase; 
+  font-size: 2vw;
 }
 `
 
@@ -75,8 +95,28 @@ width:12vw;
 
 
   export const Important = styled.span`
-  color:${props => props.important || "palevioletred"};
+  color:${props => props.important};
   `
   export const Card = styled.li`
   cursor:pointer;
+  list-style:none;
+
+
+  :visited{
+    color:blue;
+  }
+  a{
+    text-decoration: none;
+color:black;
+
+  }
+  .card_date,
+  .card_title{
+    padding:0 2%;
+    
+  }
+  .card_hover:hover{
+    background-color:rgba(0, 198,33, 0.1);
+    }
+    
   `
